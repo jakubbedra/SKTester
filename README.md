@@ -1,6 +1,7 @@
 # SKTester
 A simple testing program made in order to prepare myself better for some exams and learn a little about multithreading in C#.  
 You cannot go back to previous questions. Currently the support is limited to a specific exam, but might expand it in the future.  
+The only language available for now is polish.  
 A file containing the questions is needed. The question txt file format is:
 
   
@@ -23,6 +24,7 @@ END
   
 
 where x is the index od the correct answer  
+You need to replace the constant FILE_PATH in TestController class with the actual path to your question file.
 
 Selecting answers:  0/1/2/3 key  
 Next question:      ENTER
