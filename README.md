@@ -26,3 +26,5 @@ where x is the index od the correct answer
 
 Selecting answers:  0/1/2/3 key  
 Next question:      ENTER
+
+NOTE: there are some bugs currently that I do not really have time to fix
