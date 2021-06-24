@@ -50,14 +50,20 @@ namespace SKTester
 
         public void ViewRightAnswer()
         {
-            Console.WriteLine($"Poprawna odpowiedź: {Answers[RightAnswer]}");
+            Console.WriteLine($"Poprawna odpowiedź: {Answers[RightAnswer]}");    
         }
 
         public void ViewAnswer(int ind)
         {
             if (ind >= Answers.Count)
                 throw new ArgumentOutOfRangeException();
-            Console.WriteLine($"Twoja odpowiedź: {Answers[ind]}");
+            Console.Write("Twoja odpowiedź:    ");
+            if (ind == RightAnswer)
+                Console.ForegroundColor = ConsoleColor.Green;
+            else
+                Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"{Answers[ind]}");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }

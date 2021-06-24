@@ -5,7 +5,7 @@ namespace SKTester
 {
     class TestController
     {
-        public const string FILE_PATH = "insert_data_path_here";
+        public const string FILE_PATH = "Data\\10PytanTEST.txt";
         public const int NUMBER_OF_QUESTIONS = 50;
         public const int TIME_LIMIT_SECONDS = 30 * NUMBER_OF_QUESTIONS;//30 seconds per question
 
@@ -27,6 +27,7 @@ namespace SKTester
         /// </summary>
         public void Start()
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("Sprawdź swoją wiedzę z sieci komputerowych!");
             Console.WriteLine("Wciśnij dowolny przycisk aby zacząć.");
@@ -56,6 +57,7 @@ namespace SKTester
 
             AttemptReview();
         }
+
         private void AttemptReview()
         {
             Console.Clear();

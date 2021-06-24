@@ -18,18 +18,6 @@ namespace SKTester
             this.controller = controller;
         }
         /// <summary>
-        /// Prints selected question out in console
-        /// </summary>
-        /// <param name="ind">Index of the question to be displayed</param>
-        public void ViewQuestion(int ind)
-        {
-            if (ind >= Questions.Count)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-            Questions[ind].View();
-        }
-        /// <summary>
         /// Returns the number of correct answers
         /// </summary>
         /// <returns></returns>
@@ -89,10 +77,10 @@ namespace SKTester
                 Console.Clear();
                 Console.SetCursorPosition(0, 1);
                 Console.WriteLine($"{ind}/{TestController.NUMBER_OF_QUESTIONS}");
+                Console.WriteLine();
+                Console.WriteLine($"Wybrana odpowiedź: {selected}");
 
                 q.View();
-                Console.SetCursorPosition(0, 9);
-                Console.WriteLine($"Wybrana odpowiedź: {selected}");
 
                 while (true)
                 {
@@ -110,12 +98,12 @@ namespace SKTester
                     if ((int)cki.Key >= (int)ConsoleKey.D0 && (int)cki.Key <= (int)ConsoleKey.D3)
                     {
                         selected = (int)cki.Key - 48;
-                        Console.SetCursorPosition(0, 9);
+                        Console.SetCursorPosition(0, 3);
                         Console.WriteLine($"Wybrana odpowiedź: {selected}");
                     }
                 }
                 Answers.Add(selected);
-                Thread.Sleep(10);
+                Thread.Sleep(100);
             }
         }
     }
